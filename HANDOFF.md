@@ -32,14 +32,25 @@ accent. Old dark ink-and-gold scheme is gone.
 ## Run it
 
 ```bash
-python -m http.server 8137
+python serve.py
 ```
 
-Then open <http://localhost:8137>. (A `.claude/launch.json` is already set up, so
-in Claude Code you can just ask to preview and it will start this for you.)
+Then open <http://localhost:8137>. Use `serve.py`, **not** `python -m
+http.server` — the site uses clean URLs (`/about`, not `/about.html`) and the
+built-in server cannot resolve those, so links look broken locally even though
+they work live. `serve.py` reproduces Vercel's routing.
 
-Open the files directly with `file://` and the CSS/images will not load — it needs
-to be served over HTTP.
+Opening files directly with `file://` will not work either; it needs HTTP.
+
+## Deploying
+
+Repo is initialised and committed on `main`, ready to push. Deploy path is
+**GitHub + Vercel**: push, then import at vercel.com/new. No build command, no
+output directory — Vercel's static defaults are correct. `vercel.json` handles
+clean URLs, caching and security headers.
+
+There is no `gh`, `vercel` or `npm` on this machine, so the push and the Vercel
+import are manual steps.
 
 ## What exists
 
@@ -135,7 +146,11 @@ to be served over HTTP.
 
 ## Not done
 
-- Not deployed anywhere. It is a static site with no build step, so Netlify
-  Drop, Cloudflare Pages or GitHub Pages will all take the folder as-is.
+- **Not pushed or deployed yet.** The repo exists locally with one commit; it
+  needs a GitHub remote and a Vercel import.
+- **No canonical tags, no sitemap.** Removed on purpose — they pointed at
+  `abcoaching.ie`, which does not exist. Run `python set-domain.py <url>` once
+  there is a permanent URL (the `.vercel.app` one counts) and they come back
+  properly, along with an absolute `og:image` and the structured-data URLs.
 - No cookie banner or privacy policy. Not needed as built — the site sets no
   cookies and runs no analytics. That changes the moment analytics is added.
