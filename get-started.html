@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get started — AB Coaching Fitness</title>
+<meta name="description" content="Tell Augusto where you are at and he will come back to you personally with which service fits and what it costs.">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<!-- Icons -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#EB3B52">
+<!-- Social sharing. Run set-domain.py once a real domain exists:
+     it adds canonical + og:url and absolutises og:image. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AB Coaching Fitness">
+<meta property="og:title" content="Get started — AB Coaching Fitness">
+<meta property="og:description" content="Tell Augusto where you are at and he will come back to you personally with which service fits and what it costs.">
+<meta property="og:image" content="/images/social-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Augusto Baronio in a gi beside the words Technique got you here. Power takes you pro.">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <div class="nav__bar">
+      <a class="brand" href="/">AB Coaching<span class="brand__dot">.</span></a>
+      <nav class="nav__links" aria-label="Main">
+        <a class="nav__link" href="/">Home</a>
+        <a class="nav__link" href="/about">About</a>
+        <a class="nav__link" href="/coaching">Coaching</a>
+        <a class="nav__link" href="/results">Results</a>
+      </nav>
+      <a class="btn btn--red btn--nav" href="/get-started" aria-current="page">Get started</a>
+    </div>
+    <nav class="nav__row" aria-label="Main, compact">
+      <a class="nav__link" href="/">Home</a>
+      <a class="nav__link" href="/about">About</a>
+      <a class="nav__link" href="/coaching">Coaching</a>
+      <a class="nav__link" href="/results">Results</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="phead">
+    <div class="wrap">
+      <p class="eyebrow">Get started</p>
+      <h1 class="h1">Two minutes now.<br>A real reply back.</h1>
+      <p class="lead">
+        No automated funnel. Augusto reads these himself and comes back to you with
+        which service fits, what it costs, and where to start.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <div class="split split--wide-text">
+
+        <div class="r">
+          <!-- ============================================================
+               TODO — Augusto: make this form live (takes about 2 minutes)
+               1. Sign up free at https://formspree.io
+               2. Create a form, copy the endpoint ID (looks like "xyzabcde")
+               3. Replace YOUR_FORM_ID below with it
+               Until then the form will not send anything.
+               ============================================================ -->
+          <form class="form"
+                aria-label="Coaching enquiry"
+                action="https://formspree.io/f/YOUR_FORM_ID"
+                method="POST">
+
+            <div class="field-pair">
+              <div class="field">
+                <label for="name">Your name <span class="req">*</span></label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email <span class="req">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="field-pair">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel">
+                <span class="hint">Optional. Handy if a quick call is easier.</span>
+              </div>
+              <div class="field">
+                <label for="location">Where are you based?</label>
+                <input id="location" name="location" type="text" placeholder="Dublin, Cork, elsewhere">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="service">What are you interested in? <span class="req">*</span></label>
+              <select id="service" name="service" required>
+                <option value="">Choose one</option>
+                <option>1-1 personal training (Dublin)</option>
+                <option>2-1 partner training (Dublin)</option>
+                <option>1-1 online coaching</option>
+                <option>Not sure yet &mdash; help me pick</option>
+              </select>
+            </div>
+
+            <div class="field-pair">
+              <div class="field">
+                <label for="background">Your grappling background <span class="req">*</span></label>
+                <input id="background" name="background" type="text" required
+                       placeholder="e.g. purple belt, 5 years, training 5x a week">
+                <span class="hint">Belt, how long you have trained, how often you are on the mats.</span>
+              </div>
+              <div class="field">
+                <label for="comp">Next competition</label>
+                <input id="comp" name="comp" type="text" placeholder="Date and event, or none planned">
+                <span class="hint">This changes how the block is built.</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="gymtime">Hours a week you can give the gym</label>
+              <select id="gymtime" name="gymtime">
+                <option value="">Choose one</option>
+                <option>About 2 hours</option>
+                <option>3 to 4 hours</option>
+                <option>5 hours or more</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="goal">What is holding you back right now? <span class="req">*</span></label>
+              <textarea id="goal" name="goal" required
+                        placeholder="Where you get stuck in matches, injuries you are working around, or the level you are trying to reach."></textarea>
+            </div>
+
+            <label class="consent">
+              <input type="checkbox" name="consent" required>
+              <span>Yes, Augusto can contact me about coaching using the details above. <span class="req">*</span></span>
+            </label>
+
+            <!-- Simple spam honeypot. Real people never see or fill this. -->
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+                   aria-hidden="true" style="position:absolute;left:-9999px;">
+
+            <input type="hidden" name="_subject" value="New coaching enquiry from the AB Coaching website">
+            <!-- Formspree redirects here on success instead of showing its own page. -->
+            <input type="hidden" name="_next" value="/thanks">
+
+            <div class="btn-row" style="margin-top: var(--s3);">
+              <button class="btn btn--red btn--lg" type="submit">Send my enquiry</button>
+            </div>
+
+            <p class="hint">
+              Fields marked <span class="req">*</span> are required. Your details are
+              used to reply to you and nothing else.
+            </p>
+          </form>
+        </div>
+
+        <aside class="form-aside r" aria-labelledby="next">
+          <h2 class="h3" id="next">What happens next</h2>
+          <ul class="checks">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+              <span>Augusto reads it himself, usually the same day.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+              <span>You get a straight answer on which service fits and what it costs.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+              <span>If it is not a fit, he will tell you that too.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+              <span>Nothing gets written until you have had a proper conversation.</span>
+            </li>
+          </ul>
+
+          <p class="body-muted" style="margin-top: var(--s7); font-size: var(--f-sm);">
+            Prefer Instagram? Message
+            <a href="https://www.instagram.com/abcoaching_22/" rel="noopener" style="font-weight:600;">@abcoaching_22</a>
+            and he will pick it up there.
+          </p>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <a class="brand" href="/">AB Coaching<span class="brand__dot">.</span></a>
+        <p class="body-muted" style="margin-top: var(--s4); font-size: var(--f-sm); max-width: 34ch;">
+          Strength and conditioning for competitive grapplers. Coached by Augusto
+          Baronio in Dublin and online worldwide.
+        </p>
+      </div>
+      <div>
+        <p class="foot__h">Pages</p>
+        <ul class="foot__list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Augusto</a></li>
+          <li><a href="/coaching">Coaching</a></li>
+          <li><a href="/results">Results</a></li>
+          <li><a href="/get-started">Get started</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot__h">Coaching</p>
+        <ul class="foot__list">
+          <li><a href="/coaching#pt">1-1 personal training</a></li>
+          <li><a href="/coaching#partner">2-1 partner training</a></li>
+          <li><a href="/coaching#online">Online coaching</a></li>
+          <li><a href="/coaching#faq">Common questions</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot__h">Get in touch</p>
+        <ul class="foot__list">
+          <li><a href="/get-started">Start an enquiry</a></li>
+          <li><a href="https://www.instagram.com/abcoaching_22/" rel="noopener">Instagram &mdash; @abcoaching_22</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__base">
+      <span>&copy; 2026 AB Coaching Fitness &middot; Augusto Baronio &middot; Dublin, Ireland</span>
+      <span class="social">
+        <a href="https://www.instagram.com/abcoaching_22/" rel="noopener" aria-label="AB Coaching Fitness on Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Scraped source material and working files — not part of the site
+.research/
+
+# Local tooling
+.claude/
+__pycache__/
+*.pyc
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store
