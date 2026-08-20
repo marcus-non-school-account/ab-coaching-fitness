@@ -1,2 +1,3 @@
+# Draft. Run: python draft-mode.py off
 User-agent: *
-Allow: /
+Disallow: /

@@ -1,6 +1,13 @@
 # AB Coaching Fitness — build state
 
-Last worked on: **20 Aug 2026**. Site is **complete, audited and working**.
+Last worked on: **20 Aug 2026**. Site is **complete, audited and working**,
+and currently in **DRAFT MODE** — this version is for showing Augusto, not the
+public. Every page is `noindex, nofollow` and `robots.txt` disallows all, so a
+public Vercel URL will not get picked up by Google before he approves it.
+
+    python draft-mode.py status     # check
+    python draft-mode.py off        # when he signs off
+
 Nothing is half-finished; the items below are decisions and client input, not
 broken work.
 
@@ -61,12 +68,18 @@ import are manual steps.
 | `coaching.html` | 1-1 PT, 2-1 partner, online coaching, pricing stance, 6-question FAQ |
 | `results.html` | Suyan headline result, pointer to the pinned IG reviews, year in review |
 | `get-started.html` | The enquiry form, now asking belt, next comp and gym hours |
-| `styles.css` | All tokens — colour, type scale, spacing. Shared by all five pages |
+| `thanks.html` | Post-submit page. Permanently `noindex` |
+| `styles.css` | All tokens — colour, type scale, spacing. Shared by all pages |
 | `app.js` | Scroll reveals only. Delete it and the site still works completely |
 | `images/` | 8 photos and a 1200×630 social share card |
+| `videos/` | Empty. Its `README.md` covers adding client video stories |
 | `favicon-16/32.png`, `apple-touch-icon.png` | White "AB" on a crimson tile |
-| `robots.txt`, `sitemap.xml` | Search engine basics |
-| `.research/` | Original uncropped Instagram downloads + source URLs |
+| `serve.py` | Local dev server with Vercel-style clean URLs. Use this, not `http.server` |
+| `draft-mode.py` | Toggles `noindex` across the site for client review |
+| `set-domain.py` | Points canonical tags, OG tags and the sitemap at a real domain |
+| `vercel.json` | Clean URLs, cache headers, security headers |
+| `robots.txt` | Currently disallows everything — draft mode |
+| `.research/` | Original scraped source material. Git-ignored |
 
 ## Decisions already made
 
@@ -92,9 +105,11 @@ import are manual steps.
 
 ## Do first tomorrow
 
-1. **Make the form live.** In `get-started.html`, find `YOUR_FORM_ID` (there is a
-   TODO comment above it). Augusto signs up free at formspree.io, creates a form,
-   pastes the endpoint ID in. Until that is done the form does not send anything.
+1. **Make the form work for the demo.** In `get-started.html`, find
+   `YOUR_FORM_ID`. Do not wait on Augusto for this — create the Formspree form
+   against **your own** email so the demo works end to end, then swap it to his
+   at launch. Clients always test the contact form; it is the first thing they
+   click.
 2. **Better photos.** Instagram only serves 12 posts to logged-out visitors and
    most have text baked into them, so most of `images/` are crops of what was
    reachable. Dropping files in the folder works well — see the 2-1 photo. Two
